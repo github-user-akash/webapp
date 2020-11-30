@@ -41,7 +41,7 @@ pipeline {
   stage ('DAST') {
       steps {
         sshagent(['zap']) {
-         sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t http://testphp.vulnweb.com/ || true'
+         sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t http://testphp.vulnweb.com/ -g gen.conf -x testreport.xml|| true'
         }
       }
     }
