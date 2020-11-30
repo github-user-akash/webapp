@@ -43,7 +43,7 @@ pipeline {
  steps {
  sh 'rm /var/lib/jenkins/workspace/demo1/testreport.xml || true'
  sh ' docker run --user root -v $(pwd):/zap/wrk/ --rm -t owasp/zap2docker-weekly zap-baseline.py -t http://testphp.vulnweb.com -g gen.conf -x testreport.xml || true' 
- sh 'cat /var/lib/jenkins/workspace/brisk_demo/testreport.xml'
+ sh 'cat /var/lib/jenkins/workspace/demo1/testreport.xml'
  }
  }
   }}
