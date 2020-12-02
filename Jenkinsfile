@@ -38,6 +38,8 @@ pipeline {
         }
       }
     }
+    
+    //}}
   stage ('DAST') 
     {
  steps {
